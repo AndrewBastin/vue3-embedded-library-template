@@ -7,7 +7,7 @@ import HelloWorld from "./components/HelloWorld.vue";
  *
  * @param el Either a string (CSS selector) or a DOM element instance to mount the app into
  *
- * @returns The Vue app which is initialized
+ * @returns The Vue app which is initialized and mounted
  */
 export function initialize(el: string | Element): App {
   // Sets the 'Example.vue' component as the root component
