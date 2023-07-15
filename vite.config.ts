@@ -1,29 +1,29 @@
-import { defineConfig } from 'vite'
-import * as path from "path"
+import { defineConfig } from "vite";
+import * as path from "path";
 
-import vue from '@vitejs/plugin-vue'
-import dts from "vite-plugin-dts"
+import vue from "@vitejs/plugin-vue";
+import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  define: {
+    "process.env": process.env,
+  },
   build: {
     emptyOutDir: true,
 
     lib: {
       entry: path.resolve(__dirname, "./src/main.ts"),
-      
+
       // TODO: Edit this to select which all types of bundling you support
-      formats: ['es', 'cjs', 'umd'],
+      formats: ["es", "cjs", "umd"],
 
       // TODO: Update this to reflect your library name
-      name: 'Example',
+      name: "Example",
 
       // TODO: Update this to reflect your dist file name
-      fileName: 'example',
-    }
+      fileName: "example",
+    },
   },
-  plugins: [
-    vue(),
-    dts()
-  ],
-})
+  plugins: [vue(), dts()],
+});
